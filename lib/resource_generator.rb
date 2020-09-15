@@ -270,9 +270,9 @@ module Crucible
 
       def self.minimal_animal(namespace = FHIR)
         animal = namespace.const_get(:Patient).const_get(:Animal).new
-        animal.species = minimal_codeableconcept('http://hl7.org/fhir/animal-species','canislf', namespaec) # dog
-        animal.breed = minimal_codeableconcept('http://hl7.org/fhir/animal-breed','gret', namespaec) # golden retriever
-        animal.genderStatus = minimal_codeableconcept('http://hl7.org/fhir/animal-genderstatus','intact', namespaec) # intact
+        animal.species = minimal_codeableconcept('http://hl7.org/fhir/animal-species','canislf', namespace) # dog
+        animal.breed = minimal_codeableconcept('http://hl7.org/fhir/animal-breed','gret', namespace) # golden retriever
+        animal.genderStatus = minimal_codeableconcept('http://hl7.org/fhir/animal-genderstatus','intact', namespace) # intact
         animal
       end
 
